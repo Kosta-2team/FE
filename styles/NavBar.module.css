@@ -1,0 +1,44 @@
+ 
+  .Nav_bar {
+    width: 100vw;
+    height: 100px;
+    background-color: #344966;
+    display: flex;
+  }
+  
+  .logo_box {
+    /* flex: 1 1 auto; */
+    align-items: center;
+    display: inline-block;
+    height: 100%;
+    width:30vw;
+    min-width:90px;
+    margin:'15px 15px 13px, 80px';
+  }
+
+.select_menu_container{
+    width:70vw;
+    padding:0px 125px 0px 0px;
+}
+  
+  .select_menu_box{
+    flex-basis:240px;
+    height: 100%;
+    align-items: center;
+    float:right;
+    display:flex;
+  }
+  
+  
+  .nav_page_btn {
+    color:#fff;
+    display: inline-block;
+    word-break: keep-all;
+    margin: 1.2rem 3rem 1.2rem 3rem;
+  }
+
+  .logout_btn {
+    margin:0;
+    padding:0; 
+    min-width:12px;
+  }

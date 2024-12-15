@@ -10,10 +10,14 @@
   }
 }
 
+<<<<<<< HEAD
 html{
   height: 100%;
   width: 100%;
 }
+=======
+html,
+>>>>>>> 8fd885e573d1a6c5d845626df53f7ff6f0f75e70
 body {
   max-width: 100vw;
   overflow-x: hidden;
@@ -43,5 +47,8 @@ a {
     color-scheme: dark;
   }
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 8fd885e573d1a6c5d845626df53f7ff6f0f75e70

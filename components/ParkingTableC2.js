@@ -18,6 +18,7 @@ export default function ParkingTable() {
                 <tr>
                     <th style={thStyle}>차 번호</th>
                     <th style={thStyle}>입차 시간</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -25,6 +26,7 @@ export default function ParkingTable() {
                     <tr key={i}>
                         <td style={tdStyle}>{e.numPlate}</td>
                         <td style={tdStyle}>{dateParse(e.inTime)}</td>
+
                     </tr>
                 })
 
@@ -68,3 +70,6 @@ var dateParse = (entityDate) => {
 
   	return setTime;
 }
+
+
+

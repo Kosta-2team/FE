@@ -1,11 +1,23 @@
 services:
-  app:
+  next-app:
+    build: .
     container_name: next-app
-    build:
-      context: .
-      dockerfile: Dockerfile
     ports:
       - "3000:3000" 
+    environment:
+      - NEXTAUTH_URL=http://localhost:3000
+      - NEXTAUTH_SECRET=your_nextauth_secret
+      - MONGODB_URI=mongodb://mongo:27017/nextauth
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo:6.0
+    container_name: mongodb
+    ports:
+      - "27017:27017"
     volumes:
-      - .:/usr/src/app 
-    command: ["npm", "run", "dev"]
+      - mongodb_data:/data/db
+
+volumes:
+  mongodb_data:
+    driver: local

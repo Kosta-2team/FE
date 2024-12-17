@@ -26,7 +26,7 @@ function mainInit(){
 
 }
 
-export default function Dashboard() {
+export default function TableAllPage() {
     return (
         <>
         <Head>

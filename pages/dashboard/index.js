@@ -28,7 +28,7 @@ import ParkingTableC2 from "@/components/ParkingTableC2";
 
 // }
 
-export default function Dashboard() {
+export default function DashboardPage() {
     // useEffect(()=> {
     //     mainInit();
     // },[]);

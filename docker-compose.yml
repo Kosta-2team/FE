@@ -1,13 +1,11 @@
-version: "3.8"
 services:
-nextjs:
-  image: node:18
-  container_name: nextjs-dev
-  working_dir: /app
-  volumes:
-   - .:/app
-   - /app/node_modules
-  ports:
-   - "3000:3000"
-  command: ["npm", "run", "dev"]
-  
+  app:
+    container_name: next-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000" 
+    volumes:
+      - .:/usr/src/app 
+    command: ["npm", "run", "dev"]

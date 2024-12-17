@@ -45,12 +45,12 @@ export default function Dashboard() {
         <h1>One Start Parking Center</h1>
 
           {/* 카메라 뷰 */}
-          <div style={{ flex: 1 }}>
+          <div style={{display:"inline-block", flex:1}}>
             <Camera />
           </div>
 
           {/* 테이블 */}
-          <div style={{ flex: 1 }}>
+          <div style={{display:"inline-block",flex:1}}>
             <ParkingTableC2 />
           </div>
         </div>

@@ -21,8 +21,8 @@ export default function Camera() {
     },[]);
 
     return (
-        <div>
-            <video ref={videoRef} autoPlay playsInline style={{width:"100%", height:"auto", backgroundColor:"#eee"}}/>
+        <div tyle={{width:"100%",  height:"auto", width:"720px", height:"480px",minwidth:"360px", minheight:"240px"}}>
+            <video ref={videoRef} autoPlay playsInline style={{backgroundColor:"#eee"}} />
         </div>
     )
 }

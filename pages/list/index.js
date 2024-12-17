@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
+import ParkingTable from "@/components/ParkingTable.js";
 
 function camInit(stream){
     var cameraView = document.getElementById("cameraview");
@@ -36,7 +37,7 @@ export default function Dashboard() {
         </Head>
         <div className={`${styles.page}`}>
         <main className={styles.main}>
-            <h1>자동차 전체 테이블 데이터 페이지</h1>  
+          <ParkingTable />
         </main>
         </div>
         </>

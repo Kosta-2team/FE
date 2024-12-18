@@ -55,15 +55,16 @@ const thStyle= {
     padding:"8px",
     backgroundColor:"#0d1821",
     textAlign:"center",
-    color:"#fff"
+    color:"#fff",
+    width:"12.5rem"
 }
 
 const tdStyle = {
     border:"1px solid #0d1821",
     padding:"8px",
-    textAlign:"center"
+    textAlign:"center",
+    width:"12.5rem"
 }
-
 
 /* 
     YYYYMMDD-HHmmss 형식의 데이터를 HH:mm:ss 으로 변환하는 함수

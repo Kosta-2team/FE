@@ -4,34 +4,9 @@ import styles from "@/styles/Home.module.css";
 import Camera from "@/components/Camera";
 import ParkingTableC2 from "@/components/ParkingTableC2";
 
-// function camInit(stream){
-//     var cameraView = document.getElementById("cameraview");
-//     cameraView.srcObject = stream;
-//     cameraView.onplay();
-// }
-
-// function camInitFailed(error) {
-//     console.log("get camera permisson failed :", error)
-// }
-
-// function mainInit(){
-//         //카메라 권한 허락 여부
-//         if(!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia){
-//             alert("Media Device not supported");
-//             return;
-
-//         }
-
-//         navigator.mediaDevices.getUserMedia({video:true})
-//         .then(camInit)
-//         .catch(camInitFailed);
-
-// }
 
 export default function DashboardPage() {
-    // useEffect(()=> {
-    //     mainInit();
-    // },[]);
+ 
 
     return (
         <>
@@ -41,32 +16,30 @@ export default function DashboardPage() {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" href="/favicon.ico" alt="탭 아이콘" /> 
         </Head>
-        <main className={styles.main}>
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-        
-          <div className="contextBox" style={{width:'100vw',display:'flex' }}>
-            {/* 카메라 뷰 */}
-            <div style={{ flex:1,float:'center'}}>
-            <h1>One Start Parking Center</h1>
-              <Camera />
-            </div>
+          <div className="contextContainer" style={{width:'100vw',height:'90vh'}}>
+            
+            <div className="contextWrapper" style={{width:'100vw',height:'70vh',padding:'100px'}}>
+              <h1 style={{fontWeight:'600',fontSize:'20px',paddingLeft:'9.8rem'}}>One Start Parking Center</h1>
+              <div className="contextBox" style={{display:'flex',padding:'10px 10px' }}>
+                
+                <div style={{ flex:1, display:'flex', justifyContent: "center"}}>
+                  <Camera />
+                </div>
 
-            {/* 테이블 */}
-            <div style={{ flex:1 }}>
-              <ParkingTableC2 />
+          
+                <div style={{ flex:1 }}>
+                  
+                  <ParkingTableC2 />
+                  <div className="carNumberInputWrapper" style={{display:'flex' ,paddingTop:'5.3rem'}}>
+                  <input type="text" className="inputbox" placeholder="차 번호를 선택하거나 입력하세요" style={{flex:'3', maxWidth:'300px', padding:'8px'}} />
+                  <input type="submit" value="입력" style={{flex:'1',maxWidth:'100px'}} />
+                  </div>
+                </div>
+                
+              </div>
             </div>
           </div>
-        </div>
-        </main>
-        {/* <div className={`${styles.page}`}>
-        <main className={styles.main}>
-            <h1>One Start Building Parking Center</h1>
-            <video id="cameraview" width="720" height="480" autoPlay></video>
-            <script>
-                mainInit();
-            </script>
-        </main>
-        </div> */}
+        
         </>
     )
 }

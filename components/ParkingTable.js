@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import Link from 'next/link';
 
 export default function ParkingTable() {
     const[data, setData] = useState([]);

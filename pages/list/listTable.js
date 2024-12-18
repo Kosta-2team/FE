@@ -1,8 +1,10 @@
 const ListData = () => {
     return (
-        <>
         
-        </>
+        <div>
+            
+        </div>
+        
     )
 }
 

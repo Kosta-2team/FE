@@ -18,7 +18,7 @@ const NavBar =  () => {
                     <a href="/list" className={styles.nav_page_btn} >전체목록</a>
                     <div className="mypage_box_btn" display={{display:'inline-block'}}>
                         <div className="mypage_box_sort" style={{display:'flex',alignItems:'center'}}>
-                            <a href="/mypage" className={styles.nav_page_btn} style={{marginRight:"0px"}} >[관리자]OOO&nbsp;
+                            <a href="/Mypage" className={styles.nav_page_btn} style={{marginRight:"0px"}} >[관리자]OOO&nbsp;
                             </a>
                             <a href="/logout" className={styles.nav_page_btn} style={{marginLeft:"0px"}}>
                                 <Image src="/logout_white.png" alt="logout_btn" className={styles.logout_btn}  width={16} height={21}></Image>

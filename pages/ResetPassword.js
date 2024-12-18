@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import styles from '../styles/reset-password.module.css'
 
+
 export default function ResetPassword() {
   const router = useRouter();
   const { id } = router.query; // ID 전달받음
@@ -34,7 +35,7 @@ export default function ResetPassword() {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-      <img src='/logo_nonefill.svg' alt='logo' className={styles.logo}></img>
+      <img src='./logo_nonefill.svg' alt='logo' className={styles.logo}></img>
       <form onSubmit={handleSubmit} className={styles.form}>
         <div>
           <label htmlFor="newPw"></label>

@@ -37,7 +37,7 @@ export default function ParkingTable() {
                 {data.map((e, i)=> {
                     return(
                     <tr key={i}>
-                        <td style={tdStyle}>{e.numPlate}</td>
+                        <td style={tdStyle}>  {e.numPlate}</td>
                         <td style={tdStyle}>{dateParse(e.inTime)}</td>
                     </tr>
                     )

@@ -52,7 +52,7 @@ export default function ParkingTable() {
                         <td style={tdStyle}>{e.totalCost}</td>
                         <td style={tdStyle}>{e.minsParked}</td>
                         <td style={tdStyle}>{e.etc}</td>
-                        <td style={tdStyle}><input type="submit" value="수정" src="/modify"/></td>
+                        <td style={tdStyle}><input type="submit" value="수정" src="/modify" style={{padding:'6px 11.5px',maxWidth:'70px', borderRadius:'5px',border:0,backgroundColor:'#0D1821',color:'#f5f5f5',cursor:'pointer'}}/></td>
                     </tr>
                     )
                     

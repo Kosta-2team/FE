@@ -1,30 +1,8 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import ParkingTable from "@/components/ParkingTable.js";
+import MonthBtn from "@/components/MonthBtn";
 
-function camInit(stream){
-    var cameraView = document.getElementById("cameraview");
-    cameraView.srcObject = stream;
-    cameraView.play();
-}
-
-function camInitFailed(error) {
-    console.log("get camera permisson failed :", error)
-}
-
-function mainInit(){
-        //카메라 권한 허락 여부
-        if(!navigator.mediaDevices || !bavigator.mediaDevices.getUserMedia){
-            alert("Media Device not supported");
-            return;
-
-        }
-
-        navigator.mediaDevices.getUserMedia({video:true})
-        .then(camInit)
-        .catch(camInitFailed);
-
-}
 
 export default function TableAllPage() {
     return (
@@ -36,6 +14,7 @@ export default function TableAllPage() {
             <link rel="icon" href="/favicon.ico" alt="탭 아이콘" /> 
         </Head>
         <div className={`${styles.page}`}>
+        <MonthBtn />
         <main className={styles.main}>
           <ParkingTable />
         </main>

@@ -19,22 +19,23 @@ export default function DashboardPage() {
           <div className="contextContainer" style={{width:'100vw',height:'90vh'}}>
             
             <div className="contextWrapper" style={{width:'100vw',height:'70vh',padding:'100px'}}>
-              <h1 style={{fontWeight:'600',fontSize:'20px',paddingLeft:'9.8rem'}}>One Start Parking Center</h1>
-              <div className="contextBox" style={{display:'flex',padding:'10px 10px' }}>
-                
-                <div style={{ flex:1, display:'flex', justifyContent: "center"}}>
-                  <Camera />
-                </div>
-
-          
-                <div style={{ flex:1 }}>
+            
+                <h1 style={{fontWeight:'600',fontSize:'20px',paddingLeft:'9.8rem'}}>One Start Parking Center</h1>
+                <div className="contextBox" style={{display:'flex',padding:'10px 10px' }}>
                   
-                  <ParkingTableC2 />
-                  <div className="carNumberInputWrapper" style={{display:'flex' ,paddingTop:'5.3rem'}}>
-                  <input type="text" className="inputbox" placeholder="차 번호를 선택하거나 입력하세요" style={{flex:'3', maxWidth:'300px', padding:'8px'}} />
-                  <input type="submit" value="입력" style={{flex:'1',maxWidth:'100px'}} />
+                  <div style={{ flex:1, display:'flex', justifyContent: "center"}}>
+                    <Camera />
                   </div>
-                </div>
+          
+          
+                  <div style={{ flex:1,padding:'10px' }}>
+                    
+                    <ParkingTableC2 />
+                    <div className="carNumberInputWrapper" style={{display:'flex' ,paddingTop:'5.3rem'}}>
+                      <input type="text" className="inputbox" placeholder="차 번호를 선택하거나 입력하세요" style={{flex:'3', maxWidth:'300px', padding:'8px', border:0, borderBottom: '1px solid #000'   }} />
+                      <input type="submit" value="입력" style={{flex:'1',maxWidth:'70px', margin:'0px 0px 0px 25px', borderRadius:'5px',border:0,backgroundColor:'#0D1821',color:'#f5f5f5',minWidth:'45px',cursor:'pointer'}} />
+                    </div>
+                  </div>
                 
               </div>
             </div>

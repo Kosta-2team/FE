@@ -1,0 +1,73 @@
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 300px; /* 캐러셀의 가로 크기 */
+    margin: 20px auto;
+    overflow: hidden; /* 트랙 바깥 아이템 숨김 */
+    border: 2px solid #d1e4f3;
+    border-radius: 10px;
+    background-color: #f9fbfd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-track-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* 부드럽게 이동 */
+    width: 100%;
+}
+
+.carousel-item {
+    flex: 0 0 calc(100% / 7); /* 한 번에 7개 표시 */
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: #5c9cec;
+    color: white;
+    margin: 0 5px;
+    transition: opacity 0.3s, transform 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-item:hover {
+    background-color: #4b81c8;
+
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: #0056b3;
+
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}

@@ -1,11 +1,21 @@
 import { useState, useEffect, useRef } from "react";
 import { useGlobalContext } from '@/context/GlobalContext';
+import { useRouter } from "next/router";
 import Link from 'next/link';
 
-export default function ParkingTable() {
+
+
+
+const ParkingTable = ({ datas }) => {
     const[data, setData] = useState([]);
-    const {DateParse, TimeParse} = useGlobalContext();
-    
+    const {DateParse, TimeParse, setSelectData} = useGlobalContext();
+    const router = useRouter();
+
+    const handleSubmit = (selectedData) => {
+        setSelectData(selectedData);
+        router.push("/modify");
+    };
+
     useEffect(()=>{
         const fetchData = async () => {
             const response = await fetch("parkingData.json");
@@ -22,9 +32,6 @@ export default function ParkingTable() {
         return ()=>clearInterval(interval);
     },[]);
 
-
-    
-    //데이터 최신순 정렬
     
 
     return (
@@ -54,7 +61,7 @@ export default function ParkingTable() {
                         <td style={tdStyle}>{e.totalCost}</td>
                         <td style={tdStyle}>{e.minsParked}</td>
                         <td style={tdStyle}>{e.etc}</td>
-                        <td style={tdStyle}><input type="submit" value="수정" src="/modify" style={{padding:'6px 11.5px',maxWidth:'70px', borderRadius:'5px',border:0,backgroundColor:'#0D1821',color:'#f5f5f5',cursor:'pointer'}}/></td>
+                        <td style={tdStyle}><input type="submit" value="수정" onClick={()=>handleSubmit(e)} style={{padding:'6px 11.5px',maxWidth:'70px', borderRadius:'5px',border:0,backgroundColor:'#0D1821',color:'#f5f5f5',cursor:'pointer'}}/></td>
                     </tr>
                     )
                     
@@ -65,6 +72,8 @@ export default function ParkingTable() {
         </table>
     )
 }
+
+export default ParkingTable;
 
 const thStyle= {
     border:"1px solid #0d1821",

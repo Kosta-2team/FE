@@ -8,7 +8,7 @@ const NavBar =  () => {
         <nav className={styles.Nav_bar} height={100} >
             <div className={styles.logo_box} style={{padding:'10px 125px 10px 125px'}} >
                 <a href="/dashboard" >
-                    <Image src="/logo-No-Box.png" alt="logo" width={150} height={70} ></Image>
+                    <Image src="/logo-No-Box.svg" alt="logo" width={150} height={70} ></Image>
                 </a>
             </div>
 

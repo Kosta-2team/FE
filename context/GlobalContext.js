@@ -4,10 +4,31 @@ const GlobalContext = createContext();
 export const GlobalProvider = ({children}) => {
     
     //수정데이터 선택 저장
-    const [selectData, setSelectData] = useState("");
+    const [selectData, setSelectData] = useState({
+        column: 0,
+        numPlate: "",
+        inTime: "",
+        outTime: "",
+        rate: 0,
+        totalCost: 0,
+        minsParked: 0,
+        etc: "",
+    });
     
     //유저 월 선택 저장
-    const [selectMontt,setSelectMonth] = useState("");
+    const [selectMonth,setSelectMonth] = useState("");
+ 
+    /*
+    차량번호 정규식검사
+    작성자:여원지
+    날짜: 2024. 12. 20
+    사용: modify
+    */
+    const CarPlateValidation = (inputData) => {
+        var regExp = /[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/g;
+        var result = regExp.test(inputData); 
+        return result;
+    }
 
     /* 
     YYYYMMDD-HHmmss 형식의 데이터를 YYYY-MM-DD로 변환하는 함수
@@ -18,14 +39,11 @@ export const GlobalProvider = ({children}) => {
 
     var DateParse = (entityDate) => {
         var date = entityDate.split('-');
-        var YYYY = date[0].slice(0,3);
-        var MM = date[0].slice(3,5);
-        var DD = date[0].slice(5,7);
+        var YYYY = date[0].slice(0,4);
+        var MM = date[0].slice(4,6);
+        var DD = date[0].slice(6,8);
         return `${YYYY}-${MM}-${DD}`
     }
-
-    var test = DateParse('20241220-122756');
-    console.log(test);
 
     /* 
     YYYYMMDD-HHmmss 형식의 데이터를 HH:mm:ss 으로 변환하는 함수
@@ -54,7 +72,10 @@ export const GlobalProvider = ({children}) => {
             selectData,
             setSelectData,
             DateParse,
-            TimeParse
+            TimeParse,
+            selectMonth,
+            setSelectMonth,
+            CarPlateValidation
         }}>
             {children}
         </GlobalContext.Provider>

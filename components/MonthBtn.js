@@ -2,6 +2,8 @@ import React, {useState} from "react";
 import styles from"../styles/MonthBtn.module.css";
 import Link from "next/link";
 
+
+
 //오늘날짜 구하는 함수
 var SetToday = ()=> {
     var today = new Date();
@@ -14,7 +16,7 @@ var SetToday = ()=> {
 const today = SetToday();
 
 
-var DateBtn = () => {
+var DateBtn = () => { 
     //오늘까지의 버튼 만들기
     var lastDay = new Date(today.getFullyear,today.getMonth, 0).getDate();
 
@@ -74,7 +76,7 @@ const MonthBtn = () => {
     return(
         <div>
             {/* 추후 input으로 교체해서 사용자의 선택에 따라 날짜 바뀌게 재구성해야함 */}
-            <div>{today.getMonth}</div>
+            <input type="month" defaultValue={`${today.getFullYear}-${today.getMonth}`} class={styles.InputMonth} />
             <DateBtn />
         </div>
     )

@@ -11,9 +11,8 @@ const Router = () => {
 
         const hasAuthCookie = document.cookie.split(';').find((key)=>key.startsWith('next-auth.session-token='));
 
-        console.log(hasAuthCookie);
-
             if(router.pathname === "/"){
+
                 if(hasAuthCookie) {
                     router.replace('/dashboard');
                 }
@@ -22,6 +21,9 @@ const Router = () => {
                 }
             }
 
+            if(router.pathname === "/logout"){
+                signOut({ callbackUrl: '/login' })
+            }
             
         
     },[router]);

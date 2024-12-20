@@ -1,8 +1,10 @@
 import { useState, useEffect, useRef } from "react";
+import { useGlobalContext } from '@/context/GlobalContext';
 import Link from 'next/link';
 
 export default function ParkingTable() {
     const[data, setData] = useState([]);
+    const{TimeParse} = useGlobalContext();
     
     useEffect(()=>{
         const fetchData = async () => {
@@ -38,7 +40,7 @@ export default function ParkingTable() {
                     return(
                     <tr key={i}>
                         <td style={tdStyle}>  {e.numPlate}</td>
-                        <td style={tdStyle}>{dateParse(e.inTime)}</td>
+                        <td style={tdStyle}>{TimeParse(e.inTime)}</td>
                     </tr>
                     )
                     
@@ -64,26 +66,6 @@ const tdStyle = {
     padding:"8px",
     textAlign:"center",
     width:"12.5rem"
-}
-
-/* 
-    YYYYMMDD-HHmmss 형식의 데이터를 HH:mm:ss 으로 변환하는 함수
-    작성자: 여원지
-    날짜  : 2024.12.16 
- */
-var dateParse = (entityDate) => {
-    var setDate = new Date();
-    var date = entityDate.split('-');
-  	var setTime = [];
-
-  	for(let i=0; i < date[1].length; i++){
-      if(i%2==0){
-      	setTime.push(date[1].slice(i,i+2));  
-      }
-    }
-  	setTime = setTime.join(":");
-
-  	return setTime;
 }
 
 

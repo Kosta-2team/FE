@@ -2,25 +2,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    width: 300px; /* 캐러셀의 가로 크기 */
     margin: 20px auto;
-    overflow: hidden; /* 트랙 바깥 아이템 숨김 */
-    border: 2px solid #d1e4f3;
-    border-radius: 10px;
-    background-color: #f9fbfd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 10px; /* 버튼과 페이지 간 간격 */
 }
 
 .carousel-track-wrapper {
     overflow: hidden;
-    width: 100%;
+    width: 350px;
+ 
 }
 
 .carousel-track {
     display: flex;
-    transition: transform 0.5s ease-in-out; /* 부드럽게 이동 */
-    width: 100%;
+    transition: transform 0.5s ease-in-out; 
+    height: 40px;
 }
 
 .carousel-item {
@@ -31,33 +26,34 @@
     height: 40px;
     line-height: 40px;
     border-radius: 50%;
-    background-color: #5c9cec;
+    background-color: #75a4e6;
     color: white;
     margin: 0 5px;
     transition: opacity 0.3s, transform 0.3s;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-width:40px;
 }
 
 .carousel-item:hover {
-    background-color: #4b81c8;
-
+    background-color: #648cc4;
 }
 
 .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #007bff;
+    background-color: #648cc4;
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 8px 12px;
+    border-radius: 50%;
+    padding: 5px 10px;
     cursor: pointer;
-    z-index: 10;
-    font-size: 14px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, transform 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
 }
+
+.carousel-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
 
 .carousel-btn:hover {
     background-color: #0056b3;
@@ -70,4 +66,31 @@
 
 .carousel-btn.next {
     right: 10px;
+}
+
+
+.InputMonth {
+    background-color: #f9f9f9;
+    border: 0;
+    appearance: none; 
+}
+
+.InputMonth::-webkit-datetime-edit-text {
+    -webkit-appearance: none;
+    display: none;
+}
+
+.InputMonth::-webkit-datetime-edit-month-field{
+    -webkit-appearance: none;
+    display: none;
+}
+
+.InputMonth::-webkit-datetime-edit-day-field {
+    -webkit-appearance: none;
+    display: none;
+}
+
+.InputMonth::-webkit-datetime-edit-year-field {
+    -webkit-appearance: none;
+    display: none;
 }

@@ -4,16 +4,15 @@ services:
   next-app:
     build:
       context: .
+      dockerfile: Dockerfile
     container_name: next-app
     ports:
       - "3000:3000"
     volumes:
       - .:/app # 로컬 디렉토리를 컨테이너에 마운트
       - /app/node_modules # 컨테이너의 node_modules를 로컬과 분리
-    environment:
-      - NEXTAUTH_URL=http://localhost:3000
-      - NEXTAUTH_SECRET=your_secret_key
-      - MONGODB_URI=mongodb://mongo:27017/your_db
+    env_file:
+      - .env
     depends_on:
       - mongo
     command: npm run dev # 개발 서버 실행 명령어로 변경

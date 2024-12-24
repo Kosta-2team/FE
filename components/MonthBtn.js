@@ -17,7 +17,7 @@ const today = SetToday();
 
 
 var DateBtn = () => { 
-    //오늘까지의 버튼 만들기
+    //오늘까지의 버튼 만들기 
     var lastDay = new Date(today.getFullyear,today.getMonth, 0).getDate();
 
     //추후 유저 선택날짜 변수 로직필요
@@ -43,6 +43,7 @@ var DateBtn = () => {
 
     const trackTranslateX = -(currentIndex * 100);
 
+   
     return( 
         <div className={styles.carousel}>
             <button className={`${styles["carousel-btn"]} ${styles.prev}`} onClick={handlePrev}

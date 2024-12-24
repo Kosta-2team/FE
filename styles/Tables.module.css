@@ -1,0 +1,15 @@
+.thStyle {
+    border : 1px solid #0d1821;
+    padding : 8px;
+    background-color:#0d1821;
+    text-align:center;
+    color:#fff;
+    width:12.5rem
+}
+
+.tdStyle {
+    border:1px solid #0d1821;
+    padding:8px;
+    text-align:center;
+    width:12.5rem
+}

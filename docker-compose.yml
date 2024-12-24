@@ -13,6 +13,8 @@ services:
       - .env
     depends_on:
       - mongo
+    networks:
+      - default
     command: npm run dev # 개발 서버 실행 명령어로 변경
 
   mongo:
@@ -22,6 +24,9 @@ services:
       - "27017:27017"
     volumes:
       - mongodb_data:/data/db
-
+networks:
+  default:
+    driver: bridge
+    
 volumes:
   mongodb_data:

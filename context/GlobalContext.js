@@ -17,6 +17,7 @@ export const GlobalProvider = ({children}) => {
     
     //유저 월 선택 저장
     const [selectMonth,setSelectMonth] = useState("");
+
  
     /*
     차량번호 정규식검사
@@ -38,6 +39,12 @@ export const GlobalProvider = ({children}) => {
     */
 
     var DateParse = (entityDate) => {
+
+        if (entityDate.length < 10) {
+            console.error("TimeParse에 전달된 데이터가 올바르지 않습니다:", entityDate);
+            return ' ';
+        }
+
         var date = entityDate.split('-');
         var YYYY = date[0].slice(0,4);
         var MM = date[0].slice(4,6);
@@ -52,14 +59,24 @@ export const GlobalProvider = ({children}) => {
     사용: ParkingTable, ParkingTableC2
     */
     var TimeParse = (entityDate) => {
+
+        if ( entityDate.length < 10) {
+            console.error("TimeParse에 전달된 데이터가 올바르지 않습니다:", entityDate);
+            return ' ';
+        }
+
         var date = entityDate.split('-');
         var setTime = [];
+        console.log("데이터 확인",date);
 
+
+        console.log(typeof date);
         for(let i=0; i < date[1].length; i++){
         if(i%2==0){
             setTime.push(date[1].slice(i,i+2));  
         }
         }
+
         setTime = setTime.join(":");
 
         return setTime;

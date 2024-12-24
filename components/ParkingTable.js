@@ -4,12 +4,14 @@ import { useRouter } from "next/router";
 import Link from 'next/link';
 
 
-
+var data2 = [];
 
 const ParkingTable = ({ datas }) => {
     const[data, setData] = useState([]);
     const {DateParse, TimeParse, setSelectData} = useGlobalContext();
     const router = useRouter();
+    var isDev = false;
+    
 
     const handleSubmit = (selectedData) => {
         setSelectData(selectedData);
@@ -18,17 +20,47 @@ const ParkingTable = ({ datas }) => {
 
     useEffect(()=>{
         const fetchData = async () => {
-            const response = await fetch("parkingData.json");
-            const result = await response.json();
-            //테스트 데이터의 경우고, 추후 데이터 수정필요 
-            var recent5 = result.reverse();
+
+            if(isDev){
+                const response = await fetch("parkingData.json");
+                const result = await response.json();
+                var recent5 = result.reverse();
+                console.log(recent5);
+                setData(recent5);
+            }else{
+                //api 기본설정, 추후 전체 변수로 교체필요
+                const page = 1;
+                const limit = 10;
+
+                const url = `https://localhost:7002/api/Data/database1?page=${page}&limit=${limit}`;
+                console.log(url); 
+
+                try{
+                    const response = await fetch(url, {
+                        method: 'GET',
+                    });
+                    // 응답 상태 코드 확인
+                    if (!response.ok) {
+                        console.error(`HTTP Error: ${response.status}`);
+                        return;
+                    }
+                    const result = await response.json();
+                    if(result && result.data) {
+                        setData(result.data);
+                      
+                    } else {
+                        console.error('데이터가 올바르지 않습니다:', result);
+                    }
+                    
+                }catch (error){
+                    console.error('데이터를 가져오는 중 오류 발생:', error);
+                }
+            }
             
-            console.log(recent5);
-            setData(recent5);
             
         };
         fetchData();
-        const interval = setInterval(fetchData,100000);
+        const interval = setInterval(fetchData,10000);
         return ()=>clearInterval(interval);
     },[]);
 

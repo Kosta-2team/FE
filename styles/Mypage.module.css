@@ -2,26 +2,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: #eeefea;
-    padding: 20px;
-    box-sizing:border-box;
+    min-height: 83vh;
 }
+
 
 .wrapper{
     background: #fff;
-    margin: 120px 282px 160px 281px;
-    padding: 65px 200px 65px 200px;
+    padding: 5rem;
     border-radius: 16px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    max-width: 500px;
+    max-width: 800px;
     width: 100%;
     text-align: center;
-    
 }
 
 .btn{
-    flex:1;
     padding: 10px 20px;
     font-size: 14px;
     font-weight: bold;
@@ -31,33 +26,36 @@
     color: #fff;
     background-color: #344966;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    margin:40px;
+    margin:20px;
+    
 }
 
 .profile{
     width: 75px;
-    height: 75px;
-    padding : 10.4px 14.8px 14.6px 14px;
-    
+    height: 75px; 
+    margin-bottom: 60px; 
 }
 
-.container-1,
-.container-1 + div{
+.container1{
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 10px 0;
-}
-.container-1 img,
-.container-1 + div img {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
+    justify-content: left;
+    margin-bottom: 40px;
+    margin-left: 60px;
 }
 
-.container-1 p,
-.container-1 + div p {
-  font-size: 18px;
-  color: #333;
-  margin: 0;
+.container1 img{
+    margin-right: 50px;
+    width: 45px;
+}
+.container1 p{
+    height: 45px;
+    font-size: 18px;
+    
+    font-weight: bold;
+    /* border: 0px; */
+    /* border-left: 2px solid gray; */
+    display: flex;
+    align-items: center;
+    
 }

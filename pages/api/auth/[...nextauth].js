@@ -4,10 +4,9 @@ import { MongoClient } from 'mongodb';
 import dotenv from 'dotenv';
 
 dotenv.config();
-console.log('MONGO_URI:', process.env.MONGO_URI);
 
 const mongo_url = process.env.MONGO_URI;
-const db_name = 'managerDB'; 
+const db_name = 'managerDB';
 
 export default NextAuth({
   providers: [

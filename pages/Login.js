@@ -13,7 +13,7 @@ export default function Login() {
 
   useEffect(() => {
     if (status === 'authenticated') {
-      router.replace('/Mypage'); // 이미 로그인된 상태면 리다이렉트
+      router.replace('/dashboard'); // 이미 로그인된 상태면 리다이렉트
     }
   }, [status, router]);
 
@@ -29,7 +29,7 @@ export default function Login() {
     if (result?.error) {
       setError(result.error);
     } else {
-      router.push('/Mypage'); // 로그인 성공 시 마이페이지로 이동
+      router.push('/dashboard'); // 로그인 성공 시 마이페이지로 이동
     }
   };
 

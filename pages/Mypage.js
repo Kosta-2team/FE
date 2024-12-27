@@ -12,9 +12,11 @@ export default function Mypage() {
     return (
       <div className={styles.container}>
       <div className={styles.wrapper}>
-      <img src='/warning.svg' alt='logo' ></img>
+      <img src='/warning.svg' alt='warning' ></img>
         <p>이 페이지는 로그인이 필요합니다.</p>
-        <button className={styles.btn} onClick={() => window.location.href = '/Login'}>로그인</button>
+        <button className={styles.btn} onClick={() => window.location.href = '/Login'}
+                style={{marginTop:"40px"}}
+                >로그인</button>
       </div>
       </div>
     );
@@ -22,25 +24,31 @@ export default function Mypage() {
 
   return (
     
-    <div>
+    <div className={styles.container}>
       <div className={styles.wrapper}>
       <img src="/profile.svg" alt="profile" className={styles.profile}  />
 
-      <div className={styles.container-1}>
+      <div className={styles.container1}>
       <img src="/user-icon.svg" alt="user-icon" />
+      <p style={{ padding:'20px', border:0, borderLeft: '1px solid #000'   }}>
       <p>{session.user.name}</p>
+      </p>
       </div>
 
-      <div>
+      <div className={styles.container1}>
       <img src="/keyicon.svg" alt="keyicon" />
+      <p style={{ padding:'20px', border:0, borderLeft: '1px solid #000'   }}>
       <p>{session.user.admin}</p>
+      </p>
       </div>
 
-      <div>
+      <div className={styles.container1}>
       <img src="/lock-icon.svg" alt="lock-icon"/>
+      <p style={{border:0, borderLeft: '1px solid #000'   }}>    
       <button
               className={styles.btn}
               onClick={() => router.push('/ResetPassword')}
+              style={{marginRight: '60px'}}
             >
               비밀번호 변경
             </button>
@@ -53,6 +61,7 @@ export default function Mypage() {
             >
               로그아웃
             </button>
+      </p>
         </div>
       </div>
     </div>

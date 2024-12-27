@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-import styles from '../styles/reset-password.module.css';
+import styles from '../styles/login.module.css';
 
 export default function ResetPassword() {
   const router = useRouter();
@@ -11,25 +11,34 @@ export default function ResetPassword() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+  
     if (newPw !== confirmPw) {
-      setError('두 값이 일치하지 않습니다.');
+      setError('두 비밀번호가 일치하지 않습니다.');
       return;
     }
-
+  
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[~!@#$%^&*])[A-Za-z\d~!@#$%^&*]{8,}$/;
+    if (!passwordRegex.test(newPw)) {
+      setError('비밀번호는 최소 8자 이상이며, 영문, 숫자, 특수문자를 포함해야 합니다.');
+      return;
+    }
+  
     const res = await fetch('/api/auth/reset-password', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, newPw }),
     });
+  
     const data = await res.json();
-
+  
     if (data.error) {
       setError(data.error);
     } else {
-      alert('비밀번호가 변경되었습니다.');
+      alert('비밀번호가 성공적으로 변경되었습니다.');
       router.push('/Login');
     }
   };
+  
 
   return (
     <div className={styles.container}>

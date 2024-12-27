@@ -3,7 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from '../styles/NavBar.module.css'
 
+
 const NavBar =  () => {
+
     return (
         <nav className={styles.Nav_bar} height={100} >
             <div className={styles.logo_box} style={{padding:'10px 125px 10px 125px'}} >
@@ -20,7 +22,7 @@ const NavBar =  () => {
                         <div className="mypage_box_sort" style={{display:'flex',alignItems:'center'}}>
                             <a href="/Mypage" className={styles.nav_page_btn} style={{marginRight:"0px"}} >[관리자]OOO&nbsp;
                             </a>
-                            <a href="/logout" className={styles.nav_page_btn} style={{marginLeft:"0px"}}>
+                            <a href="/logout"  className={styles.nav_page_btn} style={{marginLeft:"0px"}}>
                                 <Image src="/logout_white.png" alt="logout_btn" className={styles.logout_btn}  width={16} height={21}></Image>
                             </a>
                         </div>

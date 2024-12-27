@@ -11,21 +11,20 @@ const Router = () => {
 
         const hasAuthCookie = document.cookie.split(';').find((key)=>key.startsWith('next-auth.session-token='));
 
-            if(router.pathname === "/"){
+         
 
-                if(hasAuthCookie) {
-                    router.replace('/dashboard');
-                }
-                else{
-                    router.replace("/Login");
+        if(router.pathname === "/"){
+
+            if(hasAuthCookie) {
+                router.replace('/dashboard');
+            }
+            else{
+                router.replace("/Login");
                 }
             }
 
-            if(router.pathname === "/logout"){
-                signOut({ callbackUrl: '/login' })
-            }
             
-        
+           
     },[router]);
 
     return null;

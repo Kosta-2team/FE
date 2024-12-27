@@ -2,7 +2,7 @@ const { createContext, useContext ,useState } = require("react");
 const GlobalContext = createContext();
 
 export const GlobalProvider = ({children}) => {
-    
+
     //수정데이터 선택 저장
     const [selectData, setSelectData] = useState({
         column: 0,
@@ -18,7 +18,36 @@ export const GlobalProvider = ({children}) => {
     //유저 월 선택 저장
     const [selectMonth,setSelectMonth] = useState("");
 
+    //개발 여부
+    const [isDev, setIsDev] = useState(true);
  
+    /*
+    데이터 Null 검사
+    작성자: 여원지
+    */
+    function isNull(v) {
+        return (v==undefined || v == null) ? true : false;
+    }    
+    
+
+    /*
+    JSON 타입인지 검사
+    */
+    function isJSON(input) {
+        if (typeof input !== "string") {
+            return false;
+        }
+
+        try {
+            const parsed = JSON.parse(input);
+            return typeof parsed == "object" && parsed != null;
+        }catch (e) {
+            return false;
+        }
+    }
+
+
+
     /*
     차량번호 정규식검사
     작성자:여원지
@@ -38,18 +67,25 @@ export const GlobalProvider = ({children}) => {
     사용:ParkingTable
     */
 
-    var DateParse = (entityDate) => {
 
-        if (entityDate.length < 10) {
-            console.error("TimeParse에 전달된 데이터가 올바르지 않습니다:", entityDate);
+    var DateParse = (entityDate) => {
+        if(isNull(entityDate)){
             return ' ';
         }
-
-        var date = entityDate.split('-');
-        var YYYY = date[0].slice(0,4);
-        var MM = date[0].slice(4,6);
-        var DD = date[0].slice(6,8);
-        return `${YYYY}-${MM}-${DD}`
+     
+            if (entityDate.length < 10) {
+                console.error("DateParse에 전달된 데이터가 올바르지 않습니다:", entityDate);
+                return ' ';
+            }
+    
+            var date = entityDate.split('-');
+            var YYYY = date[0].slice(0,4);
+            var MM = date[0].slice(4,6);
+            var DD = date[0].slice(6,8);
+            return `${YYYY}-${MM}-${DD}`;
+  
+        
+        
     }
 
     /* 
@@ -60,6 +96,10 @@ export const GlobalProvider = ({children}) => {
     */
     var TimeParse = (entityDate) => {
 
+        if(isNull(entityDate)){
+            return ' ';
+        }
+
         if ( entityDate.length < 10) {
             console.error("TimeParse에 전달된 데이터가 올바르지 않습니다:", entityDate);
             return ' ';
@@ -67,10 +107,10 @@ export const GlobalProvider = ({children}) => {
 
         var date = entityDate.split('-');
         var setTime = [];
-        console.log("데이터 확인",date);
+       
 
 
-        console.log(typeof date);
+        
         for(let i=0; i < date[1].length; i++){
         if(i%2==0){
             setTime.push(date[1].slice(i,i+2));  
@@ -92,7 +132,11 @@ export const GlobalProvider = ({children}) => {
             TimeParse,
             selectMonth,
             setSelectMonth,
-            CarPlateValidation
+            CarPlateValidation,
+            isDev,
+            setIsDev,
+            isNull,
+            isJSON
         }}>
             {children}
         </GlobalContext.Provider>

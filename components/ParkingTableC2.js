@@ -1,29 +1,37 @@
 import { useState, useEffect, useRef } from "react";
 import { useGlobalContext } from '@/context/GlobalContext';
 import Link from 'next/link';
+import Cookies from 'js-cookie';
 
 
-export default function ParkingTable() {
-    var isDev = false;
+export default function ParkingTable({onRowClick}) {
+    
     const[data, setData] = useState([]);
-    const{TimeParse} = useGlobalContext();
-
+    const{TimeParse,isDev} = useGlobalContext();
+    
 
  useEffect(()=>{
         const fetchData = async () => {
 
             if(isDev){
-                const response = await fetch("parkingData.json");
+                const response = await fetch("carParking.json");
                 const result = await response.json();
-                var recent5 = result.reverse();
+                var recent5 = result.reverse().slice(0,5);
+                
                 console.log(recent5);
                 setData(recent5);
             }else{
                 //api 기본설정, 추후 전체 변수로 교체필요
                 const page = 1;
-                const limit = 10;
+                const limit = 5;
 
-                const url = `https://localhost:7002/api/Data/database1?page=${page}&limit=${limit}`;
+                var url;
+                if(isDev){
+                    url = `http://192.168.0.18:7003/api/Data/database1?page=${page}&limit=${limit}`;                    
+                }else{
+                    url = `https://localhost:7002/api/Data/database1?page=${page}&limit=${limit}`;                    
+                }
+                
                 console.log(url); 
 
                 try{
@@ -55,6 +63,11 @@ export default function ParkingTable() {
         return ()=>clearInterval(interval);
     },[]);
 
+    // const handleRowClick = (selectedData) => {
+    //     // 쿠키에 값 저장 (1일 후 만료 설정)
+    //     Cookies.set('selectedData', selectedData, { expires: 1 });
+    //   };
+    
     return (
         <table>
             <thead>
@@ -66,8 +79,8 @@ export default function ParkingTable() {
             <tbody>
                 {data.map((e, i)=> {
                     return(
-                    <tr key={i}>
-                        <td style={tdStyle}>  {e.numPlate}</td>
+                    <tr key={i} onClick={() => onRowClick(e)}>
+                        <td style={tdStyle} >  {e.numPlate}</td>
                         <td style={tdStyle}>{TimeParse(e.inTime)}</td>
                     </tr>
                     )

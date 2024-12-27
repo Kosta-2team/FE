@@ -4,13 +4,12 @@ import { useRouter } from "next/router";
 import Link from 'next/link';
 
 
-var data2 = [];
 
 const ParkingTable = ({ datas }) => {
     const[data, setData] = useState([]);
-    const {DateParse, TimeParse, setSelectData} = useGlobalContext();
+    const {DateParse, TimeParse, setSelectData,isDev} = useGlobalContext();
     const router = useRouter();
-    var isDev = false;
+
     
 
     const handleSubmit = (selectedData) => {
@@ -22,7 +21,7 @@ const ParkingTable = ({ datas }) => {
         const fetchData = async () => {
 
             if(isDev){
-                const response = await fetch("parkingData.json");
+                const response = await fetch("carParking.json");
                 const result = await response.json();
                 var recent5 = result.reverse();
                 console.log(recent5);
@@ -30,9 +29,16 @@ const ParkingTable = ({ datas }) => {
             }else{
                 //api 기본설정, 추후 전체 변수로 교체필요
                 const page = 1;
-                const limit = 10;
-
-                const url = `https://localhost:7002/api/Data/database1?page=${page}&limit=${limit}`;
+                const limit = 25;
+ 
+                
+                var url;
+                if(isDev ){
+                    url = `http://192.168.0.18:7003/api/Data/database1?page=${page}&limit=${limit}`;                    
+                }else{
+                    url = `https://localhost:7002/api/Data/database1?page=${page}&limit=${limit}`;                    
+                }
+                
                 console.log(url); 
 
                 try{
@@ -60,7 +66,7 @@ const ParkingTable = ({ datas }) => {
             
         };
         fetchData();
-        const interval = setInterval(fetchData,10000);
+        const interval = setInterval(fetchData,1000);
         return ()=>clearInterval(interval);
     },[]);
 
@@ -76,7 +82,7 @@ const ParkingTable = ({ datas }) => {
                     <th style={thStyle}>출차시간</th>
                     <th style={thStyle}>시간당 요금</th>
                     <th style={thStyle}>금액</th>
-                    <th style={thStyle}>주차된 시간</th>
+                    <th style={thStyle}>주차된 시간(분)</th>
                     <th style={thStyle}>비고</th>
                     <th style={thStyle}>수정</th>                    
                 </tr>
@@ -85,7 +91,8 @@ const ParkingTable = ({ datas }) => {
                 {data.map((e, i)=> {
                     return(
                     <tr key={i}>
-                        <td style={tdStyle}>{e.column}</td>
+                        <td style={tdStyle}>{i}</td>
+                        {/* <td style={tdStyle}>{e.column}</td> */}
                         <td style={tdStyle}>{e.numPlate}</td>
                         <td style={tdStyle}>{`${ DateParse(e.inTime) } ${ TimeParse(e.inTime) }`}</td>
                         <td style={tdStyle}>{`${ DateParse(e.outTime) } ${ TimeParse(e.outTime) }`}</td>

@@ -1,303 +1,323 @@
 [
-    {
-        "column" : 1,
-        "numPlate" :  "42아 9281",
-        "inTime" : "20241206-150339",
-        "outTime":"20241206-174231",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 2,
-        "numPlate" :  "31바 9283",
-        "inTime" : "20241206-151939",
-        "outTime":"20241206-171531",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 3,
-        "numPlate" :  "82사 2321",
-        "inTime" : "20241206-152140",
-        "outTime":"20241206-143431",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 4,
-        "numPlate" :  "93자 2165",
-        "inTime" : "20241206-152347",
-        "outTime":"20241206-145631",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 5,
-        "numPlate" :  "27아 7734",
-        "inTime" : "20241206-152539",
-        "outTime":"20241206-154231",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 6,
-        "numPlate" :  "38바 2615",
-        "inTime" : "20241206-152739",
-        "outTime":"20241206-180231",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 7,
-        "numPlate" :  "52사 3424",
-        "inTime" : "20241206-153139",
-        "outTime":"20241206-173231",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 8,
-        "numPlate" :  "91자 2962",
-        "inTime" : "20241206-153239",
-        "outTime":"20241206-153231",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 9,
-        "numPlate" :  "41아 5281",
-        "inTime" : "20241206-153439",
-        "outTime":"20241206-174331",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 10,
-        "numPlate" :  "37바 2938",
-        "inTime" : "20241206-153639",
-        "outTime":"20241206-173431",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 11,
-        "numPlate" :  "26사 2923",
-        "inTime" : "20241206-153839",
-        "outTime":"20241206-161031",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 12,
-        "numPlate" :  "38자 2155",
-        "inTime" : "20241206-154039",
-        "outTime":"20241206-164031",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 13,
-        "numPlate" :  "26아 9228",
-        "inTime" : "20241206-154239",
-        "outTime":"20241206-174231",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 14,
-        "numPlate" :  "14바 1124",
-        "inTime" : "20241206-154339",
-        "outTime":"20241206-165731",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 15,
-        "numPlate" :  "73사 9257",
-        "inTime" : "20241206-154539",
-        "outTime":"20241206-161031",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 16,
-        "numPlate" :  "46자 4428",
-        "inTime" : "20241206-154639",
-        "outTime":"20241206-172031",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 17,
-        "numPlate" :  "62아 6339",
-        "inTime" : "20241206-154939",
-        "outTime":"20241206-174931",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 18,
-        "numPlate" :  "57바 2938",
-        "inTime" : "20241206-155039",
-        "outTime":"20241206-175031",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 19,
-        "numPlate" :  "72사 1025",
-        "inTime" : "20241206-155139",
-        "outTime":"20241206-174131",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 20,
-        "numPlate" :  "96자 2064",
-        "inTime" : "20241206-155339",
-        "outTime":"20241206-163131",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 21,
-        "numPlate" :  "24아 1892",
-        "inTime" : "20241206-155639",
-        "outTime":"20241206-173431",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 22,
-        "numPlate" :  "24바 2024",
-        "inTime" : "20241206-155839",
-        "outTime":"20241206-163031",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 23,
-        "numPlate" :  "24사 1214",
-        "inTime" : "20241206-155939",
-        "outTime":"20241206-164131",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 24,
-        "numPlate" :  "24자 1225",
-        "inTime" : "20241206-160139",
-        "outTime":"20241206-164731",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 25,
-        "numPlate" :  "23아 0302",
-        "inTime" : "20241206-160339",
-        "outTime":"20241206-164231",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 26,
-        "numPlate" :  "24바 0219",
-        "inTime" : "20241206-160539",
-        "outTime":"20241206-164631",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 27,
-        "numPlate" :  "82사 2321",
-        "inTime" : "20241206-160739",
-        "outTime":"20241206-174331",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 28,
-        "numPlate" :  "28자 2535",
-        "inTime" : "20241206-160839",
-        "outTime":"20241206-174334",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 29,
-        "numPlate" :  "71아 1920",
-        "inTime" : "20241206-160939",
-        "outTime":"20241206-174352",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    },
-    {
-        "column" : 30,
-        "numPlate" :  "12바 1793",
-        "inTime" : "20241206-161139",
-        "outTime":"20241206-154421",
-        "rate":10000,
-        "totalCost":0,
-        "minsParked":0,
-        "etc":""
-    }
-    
+  {
+    "column": 1,
+    "numPlate": "42아 9281",
+    "inTime": "20241206-150339",
+    "outTime": "20241206-174231",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 2,
+    "numPlate": "31바 9283",
+    "inTime": "20241206-151939",
+    "outTime": "20241206-171531",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 3,
+    "numPlate": "82사 2321",
+    "inTime": "20241206-152140",
+    "outTime": "20241206-143431",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 4,
+    "numPlate": "93자 2165",
+    "inTime": "20241206-152347",
+    "outTime": "20241206-145631",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 5,
+    "numPlate": "27아 7734",
+    "inTime": "20241206-152539",
+    "outTime": "20241206-154231",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 6,
+    "numPlate": "38바 2615",
+    "inTime": "20241206-152739",
+    "outTime": "20241206-180231",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 7,
+    "numPlate": "52사 3424",
+    "inTime": "20241206-153139",
+    "outTime": "20241206-173231",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 8,
+    "numPlate": "91자 2962",
+    "inTime": "20241206-153239",
+    "outTime": "20241206-153231",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 9,
+    "numPlate": "41아 5281",
+    "inTime": "20241206-153439",
+    "outTime": "20241206-174331",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 10,
+    "numPlate": "37바 2938",
+    "inTime": "20241206-153639",
+    "outTime": "20241206-173431",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 11,
+    "numPlate": "26사 2923",
+    "inTime": "20241206-153839",
+    "outTime": "20241206-161031",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 12,
+    "numPlate": "38자 2155",
+    "inTime": "20241206-154039",
+    "outTime": "20241206-164031",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 13,
+    "numPlate": "26아 9228",
+    "inTime": "20241206-154239",
+    "outTime": "20241206-174231",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 14,
+    "numPlate": "14바 1124",
+    "inTime": "20241206-154339",
+    "outTime": "20241206-165731",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 15,
+    "numPlate": "73사 9257",
+    "inTime": "20241206-154539",
+    "outTime": "20241206-161031",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 16,
+    "numPlate": "46자 4428",
+    "inTime": "20241206-154639",
+    "outTime": "20241206-172031",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 17,
+    "numPlate": "62아 6339",
+    "inTime": "20241206-154939",
+    "outTime": "20241206-174931",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 18,
+    "numPlate": "57바 2938",
+    "inTime": "20241206-155039",
+    "outTime": "20241206-175031",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 19,
+    "numPlate": "72사 1025",
+    "inTime": "20241206-155139",
+    "outTime": "20241206-174131",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 20,
+    "numPlate": "96자 2064",
+    "inTime": "20241206-155339",
+    "outTime": "20241206-163131",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 21,
+    "numPlate": "24아 1892",
+    "inTime": "20241206-155639",
+    "outTime": "20241206-173431",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 22,
+    "numPlate": "24바 2024",
+    "inTime": "20241206-155839",
+    "outTime": "20241206-163031",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 23,
+    "numPlate": "24사 1214",
+    "inTime": "20241206-155939",
+    "outTime": "20241206-164131",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 24,
+    "numPlate": "24자 1225",
+    "inTime": "20241206-160139",
+    "outTime": "20241206-164731",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 25,
+    "numPlate": "23아 0302",
+    "inTime": "20241206-160339",
+    "outTime": "20241206-164231",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 26,
+    "numPlate": "24바 0219",
+    "inTime": "20241206-160539",
+    "outTime": "20241206-164631",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 27,
+    "numPlate": "82사 2321",
+    "inTime": "20241206-160739",
+    "outTime": "20241206-174331",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 28,
+    "numPlate": "28자 2535",
+    "inTime": "20241206-160839",
+    "outTime": "20241206-174334",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 29,
+    "numPlate": "71아 1920",
+    "inTime": "20241206-160939",
+    "outTime": "20241206-174352",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 30,
+    "numPlate": "12바 1793",
+    "inTime": "20241206-161139",
+    "outTime": "20241206-154421",
+    "rate": 10000,
+    "totalCost": 0,
+    "minsParked": 0,
+    "etc": ""
+  },
+  {
+    "column": 0,
+    "numPlate": "B4MAC",
+    "inTime": "20241226-102949",
+    "rate": 10000,
+    "etc": "테스트!!"
+  },
+  {
+    "column": 0,
+    "numPlate": "B4MAC",
+    "inTime": "20241226-102949",
+    "rate": "8000",
+    "etc": "차 고장"
+  },
+  {
+    "column": 0,
+    "numPlate": "B4MAC",
+    "inTime": "20241226-102949",
+    "rate": "8000",
+    "etc": "차고장"
+  }
 ]

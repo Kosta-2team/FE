@@ -1,0 +1,171 @@
+[
+  {
+    "_id": {
+      "$oid": "676cb18d6b0a39a13fc48af2"
+    },
+    "column": 1,
+    "numPlate": "B4MAC",
+    "inTime": "20241226-102949",
+    "outTime": "20241226-103012",
+    "rate": 10000,
+    "totalCost": 10000,
+    "minsParked": 1,
+    "etc": null
+  },
+  {
+    "_id": {
+      "$oid": "676cb2d769dc1cd928bafadf"
+    },
+    "column": 1,
+    "numPlate": "ML22OCF",
+    "inTime": "20241226-103519",
+    "outTime": "20241226-104656",
+    "rate": 10000,
+    "totalCost": 10000,
+    "minsParked": 11,
+    "etc": null
+  },
+  {
+    "_id": {
+      "$oid": "676cba6627d51db1481cc956"
+    },
+    "column": 1,
+    "numPlate": "8272HYX",
+    "inTime": "20241226-110734",
+    "outTime": "20241226-145210",
+    "rate": 10000,
+    "totalCost": 180000,
+    "minsParked": 225,
+    "etc": null
+  },
+  {
+    "_id": {
+      "$oid": "676cbb1044a72b08b42469e7"
+    },
+    "column": 1,
+    "numPlate": "64MAC",
+    "inTime": "20241226-111023",
+    "outTime": "20241226-145134",
+    "rate": 10000,
+    "totalCost": 180000,
+    "minsParked": 221,
+    "etc": null
+  },
+  {
+    "_id": {
+      "$oid": "676cfa39e2728abc7aaa9fb3"
+    },
+    "column": 1,
+    "numPlate": "8272HYX",
+    "inTime": "20241226-153952",
+    "outTime": "20241226-154223",
+    "rate": 10000,
+    "totalCost": 10000,
+    "minsParked": 3,
+    "etc": null
+  },
+  {
+    "_id": {
+      "$oid": "676d076793c509ac6d7ecd7a"
+    },
+    "column": 1,
+    "numPlate": "64MAC",
+    "inTime": "20241226-163607",
+    "outTime": "20241226-163608",
+    "rate": 10000,
+    "totalCost": 10000,
+    "minsParked": 0,
+    "etc": null
+  },
+  {
+    "_id": {
+      "$oid": "676d076993c509ac6d7ecd7b"
+    },
+    "column": 2,
+    "numPlate": "64MAC",
+    "inTime": "20241226-163609",
+    "outTime": "0",
+    "rate": 10000,
+    "totalCost": null,
+    "minsParked": null,
+    "etc": null
+  },
+  {
+    "_id": {
+      "$oid": "676d0ae94b320bf2c4321886"
+    },
+    "column": 0,
+    "numPlate": "B4MAC",
+    "inTime": "20241226-102944",
+    "outTime": null,
+    "minsParked": null,
+    "rate": 10000,
+    "totalCost": null,
+    "etc": "테스트"
+  },
+  {
+    "_id": {
+      "$oid": "676d0b814b320bf2c4321887"
+    },
+    "column": 0,
+    "numPlate": "B4MAC",
+    "inTime": "20241226-102945",
+    "outTime": null,
+    "minsParked": null,
+    "rate": 10000,
+    "totalCost": null,
+    "etc": "테스트!!"
+  },
+  {
+    "_id": {
+      "$oid": "676d0c1e4b320bf2c4321888"
+    },
+    "column": 0,
+    "numPlate": "B4MAC",
+    "inTime": "20241226-102946",
+    "outTime": null,
+    "minsParked": null,
+    "rate": 10000,
+    "totalCost": null,
+    "etc": "테스트3"
+  },
+  {
+    "_id": {
+      "$oid": "676d0c834b320bf2c4321889"
+    },
+    "column": 0,
+    "numPlate": "64MAC",
+    "inTime": "20241226-102947",
+    "outTime": null,
+    "minsParked": null,
+    "rate": 10000,
+    "totalCost": null,
+    "etc": "테스트4"
+  },
+  {
+    "_id": {
+      "$oid": "676d0e4c4b320bf2c432188a"
+    },
+    "column": 0,
+    "numPlate": "8272HYX",
+    "inTime": "20241226-102948",
+    "outTime": null,
+    "minsParked": null,
+    "rate": 10000,
+    "totalCost": null,
+    "etc": "테스트44"
+  },
+  {
+    "_id": {
+      "$oid": "676d0ef24b320bf2c432188b"
+    },
+    "column": 0,
+    "numPlate": "B4MAC",
+    "inTime": "20241226-102949",
+    "outTime": null,
+    "minsParked": null,
+    "rate": 10000,
+    "totalCost": null,
+    "etc": "test42test42"
+  }
+]

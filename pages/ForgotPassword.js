@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-import styles from '../styles/forgot-password.module.css';
+import styles from '../styles/login.module.css';
 
 export default function ForgotPassword() {
   const router = useRouter();
@@ -10,6 +10,9 @@ export default function ForgotPassword() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    console.log({userId, userBirth});
+
     const res = await fetch('/api/auth/verify-user', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -60,3 +63,4 @@ export default function ForgotPassword() {
     </div>
   );
 }
+

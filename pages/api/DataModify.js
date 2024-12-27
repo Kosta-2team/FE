@@ -16,11 +16,7 @@ const ModifyBack = async (req, res) => {
     const updatedData =  
     (isDev)?
     {
-        _id : getData.id,
-        numPlate: getData.numPlate,
-        inTime: getData.inTime,
-        rate: Number(getData.rate),
-        etc: getData.etc
+       ...getData
      } :
      {
         numPlate: getData.numPlate,

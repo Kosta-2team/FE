@@ -62,11 +62,6 @@ export default function ParkingTable({onRowClick}) {
         const interval = setInterval(fetchData,10000);
         return ()=>clearInterval(interval);
     },[]);
-
-    // const handleRowClick = (selectedData) => {
-    //     // 쿠키에 값 저장 (1일 후 만료 설정)
-    //     Cookies.set('selectedData', selectedData, { expires: 1 });
-    //   };
     
     return (
         <table>

@@ -72,25 +72,45 @@
 .InputMonth {
     background-color: #f9f9f9;
     border: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 8px 12px;
+    font-size: 16px;
+    color: #333;
+}
+/* .InputMonth::-webkit-datetime-edit-text {
+    -webkit-appearance: none;
+    display: none;
+} */
+
+/* .InputMonth::-webkit-datetime-edit-month-field{
     appearance: none; 
-}
-
-.InputMonth::-webkit-datetime-edit-text {
-    -webkit-appearance: none;
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
     display: none;
-}
-
-.InputMonth::-webkit-datetime-edit-month-field{
-    -webkit-appearance: none;
-    display: none;
-}
+} */
 
 .InputMonth::-webkit-datetime-edit-day-field {
-    -webkit-appearance: none;
+    appearance: none; /* 브라우저 기본 스타일 제거 */
+    -webkit-appearance: none; /* 사파리 브라우저 기본 스타일 제거 */
+    -moz-appearance: none; /* 파이어폭스 기본 스타일 제거 */
     display: none;
 }
 
 .InputMonth::-webkit-datetime-edit-year-field {
-    -webkit-appearance: none;
+    appearance: none; /* 브라우저 기본 스타일 제거 */
+    -webkit-appearance: none; /* 사파리 브라우저 기본 스타일 제거 */
+    -moz-appearance: none; /* 파이어폭스 기본 스타일 제거 */
     display: none;
+}
+
+.monthContainer{
+    position: relative;
+}
+
+.displayMonth {
+    font-size: 16px;
+  font-weight: bold;
+  margin-left: 10px;
 }

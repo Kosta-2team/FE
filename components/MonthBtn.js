@@ -13,8 +13,13 @@ var SetToday = ()=> {
         'getDate' : Number(today.getDate())
 };
 }
-const today = SetToday();
 
+var today = today();
+const [month, setMonth] = useState( `${today.year}-${String(today.month).padStart(2, "0")}`);
+
+const handleChange = (event) => {
+    setMonth(event.target.value);
+  };
 
 var DateBtn = () => { 
     //오늘까지의 버튼 만들기 
@@ -71,14 +76,22 @@ var DateBtn = () => {
 }
 
 
+
 const MonthBtn = () => {
    
     
     return(
         <div>
             {/* 추후 input으로 교체해서 사용자의 선택에 따라 날짜 바뀌게 재구성해야함 */}
-            <input type="month" defaultValue={`${today.getFullYear}-${today.getMonth}`} class={styles.InputMonth} />
+            <div className={styles.monthContainer}>
+                <input type="month" value={month} onChange={handleChange}
+                max={`${today.getFullyear}-${today.getMonth}`} class={styles.InputMonth}  />
+                <span className={styles.displayMonth}>
+                    {month.split('-')[1]}월
+                </span>
+            </div>
             <DateBtn />
+            
         </div>
     )
 }

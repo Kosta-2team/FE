@@ -134,7 +134,7 @@
       "$oid": "676d0c834b320bf2c4321889"
     },
     "column": 0,
-    "numPlate": "64MAC",
+    "numPlate": "64MAC2",
     "inTime": "20241226-102947",
     "outTime": null,
     "minsParked": null,
@@ -160,11 +160,11 @@
       "$oid": "676d0ef24b320bf2c432188b"
     },
     "column": 0,
-    "numPlate": "B4MAC2",
+    "numPlate": "B4MAC24",
     "inTime": "20241226-102949",
     "outTime": null,
     "minsParked": null,
-    "rate": 10000,
+    "rate": "8888",
     "totalCost": null,
     "etc": "test42test42"
   }

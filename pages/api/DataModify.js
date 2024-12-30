@@ -9,21 +9,28 @@ const ModifyBack = async (req, res) => {
     var isDev = true;
 
     console.log("요청 메서드 뭘로?",req.method);
+    const referer = req.headers.referer || ""; // 이전 경로
+    console.log("이전 경로:", referer);
     const getData = req.body; 
     console.log("getData", getData);
 
     // API가 요구하는 형식으로 데이터 래핑
     const updatedData =  
-    (isDev)?
+    (isDev && !referer.includes("/modify"))?
     {
        ...getData
-     } :
-     {
-        numPlate: getData.numPlate,
-        inTime: getData.inTime,
-        rate: Number(getData.rate),
-        etc: getData.etc
-     }; // 'data' 필드로 감싸기
+     } : {
+        ...getData,
+        _id:getData.id,
+        id:undefined,
+      };
+     
+    //  {  
+    //     numPlate: getData.numPlate,
+    //     inTime: getData.inTime,
+    //     rate: Number(getData.rate),
+    //     etc: getData.etc
+    //  }; // 'data' 필드로 감싸기
     console.log("래핑데이터",updatedData);
 
      
@@ -73,7 +80,12 @@ const ModifyBack = async (req, res) => {
             const jsonData = fs.readFileSync(filePath, 'utf8');
             const parkingData = JSON.parse(jsonData);
             
-            const index = parkingData.findIndex(item => item._id.$oid === updatedData._id.$oid );
+            const  index = referer.includes("/modify") ?
+            parkingData.findIndex(item => item._id?.$oid === updatedData._id?.$oid) 
+            :  parkingData.findIndex(item => item._id.$oid === updatedData._id.$oid );
+            //parkingData.findIndex(item => item._id.$oid === updatedData._id.$oid );
+                  
+
             if (index === -1) {
                 return res.status(404).json({ message: '해당 데이터를 찾을 수 없습니다.' });
             }

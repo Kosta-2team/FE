@@ -77,7 +77,8 @@ const MonthBtn = () => {
     return(
         <div>
             {/* 추후 input으로 교체해서 사용자의 선택에 따라 날짜 바뀌게 재구성해야함 */}
-            <input type="month" defaultValue={`${today.getFullYear}-${today.getMonth}`} class={styles.InputMonth} />
+            {/* <input type="month" defaultValue={`${today.getFullYear}-${today.getMonth}`} class={styles.InputMonth} /> */}
+            <input type="month" Value="2024-12" max="2024-12" class={styles.InputMonth}  />
             <DateBtn />
         </div>
     )

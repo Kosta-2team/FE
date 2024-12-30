@@ -5,7 +5,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const mongo_url = process.env.MONGO_URI;
+const mongo_url = "mongodb+srv://hay:Wongpt4@cluster0.55bn1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 const db_name = 'managerDB';
 
 export default NextAuth({
